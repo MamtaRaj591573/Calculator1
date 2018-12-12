@@ -1,0 +1,17 @@
+Pipeline
+{
+Agent any
+Stages
+	{
+	Stage(‘build’)
+	{
+	Steps
+		{
+			Echo ‘—demo—‘
+		}
+	}
+	Stage(‘Test’)
+	{
+	}
+
+}
