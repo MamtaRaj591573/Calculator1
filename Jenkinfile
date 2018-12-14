@@ -5,28 +5,20 @@ pipeline
 		stage ('Compile Stage')
 		{
 		steps{
-			withMaven(maven : 'Maven_3.3.9')
-			{
-				echo 'mvn clean compile'
-			}
+			echo 'mvn clean compile'
 		      }
 		}
 		stage ('Testing stage')
 		{
 		steps{
-			withMaven(maven : 'Maven_3.3.9')
-			{
-				echo 'mvn Testing'
-			}
-		      }
+			echo 'mvn Testing'
+		     }
 		}
 		stage ('Deployment stage')
 		{
 		steps{
-			withMaven(maven : 'Maven_3.3.9')
-			{
-				echo 'mvn Deploy'
-			}
+			echo 'mvn Deploy'
+			
 		      }
 		}
 	}
