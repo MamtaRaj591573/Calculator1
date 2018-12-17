@@ -1,19 +1,15 @@
 pipeline
 {
 agent any
-Stages
+stages
 {
-  Stage('SCM')
+  stage('Build')
   {
     git 'https://github.com/MamtaRaj591573/MyCalculator'
   }
-  Stage('Compile')
+  stage('Test')
   {
    sh 'mvn package'
-   steps
-   {
-      echo 'done'
-    }
    }
 }
 }
