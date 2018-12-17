@@ -5,11 +5,17 @@ stages
 {
   stage('Build')
   {
-    git 'https://github.com/MamtaRaj591573/MyCalculator'
+    steps
+    {
+       git 'https://github.com/MamtaRaj591573/MyCalculator'
+    }
   }
   stage('Test')
   {
-   sh 'mvn package'
+    steps
+    {
+      sh 'mvn package'
+    }
    }
 }
 }
