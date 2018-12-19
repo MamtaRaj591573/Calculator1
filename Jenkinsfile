@@ -7,14 +7,15 @@ stages
   {
     steps
     {
-       git 'https://github.com/MamtaRaj591573/MyCalculator'
+       bat 'echo %PATH%'
+       echo env.PATH
     }
   }
   stage('Test')
   {
     steps
     {
-      sh 'mvn package'
+      echo 'mvn package'
     }
    }
 }
