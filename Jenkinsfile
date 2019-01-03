@@ -17,10 +17,7 @@ stages
     {
         bat 'mvn test'
       echo 'basic test done'
-     }
-      steps
-    {
-      bat 'mvn integration-test'
+       bat 'mvn integration-test'
       echo 'integration test done'
     }
    }
