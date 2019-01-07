@@ -19,7 +19,7 @@ stages
       echo 'basic test done'
        bat 'mvn integration-test'
       echo 'integration test done'
-      bat 'mvn smoke-testing'
+      bat 'mvn smoke-test'
       echo 'smoke testing is done'
 
        }
