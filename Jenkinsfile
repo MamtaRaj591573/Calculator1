@@ -19,6 +19,8 @@ stages
       echo 'basic test done'
        bat 'mvn integration-test'
       echo 'integration test done'
+      bat "cucumber fileIncludePattern: '**/*.json', sortingMethod: 'ALPHABETICAL'"
+      echo  'report is generated'
     }
    }
   stage('Verify')
