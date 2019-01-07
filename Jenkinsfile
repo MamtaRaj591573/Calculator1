@@ -31,6 +31,8 @@ stages
   }
   stage('Generate HTML report')
   {
+    steps
+    {
       cucumber buildStatus: 'UNSTABLE',
                 fileIncludePattern: '**/*.json',
                 trendsLimit: 10,
@@ -40,6 +42,7 @@ stages
                         'value': 'Firefox'
                     ]
                 ]
+    }
   }
 }
 }
