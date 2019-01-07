@@ -19,9 +19,7 @@ stages
       echo 'basic test done'
        bat 'mvn integration-test'
       echo 'integration test done'
-      bat "cucumber fileIncludePattern: '**/*.json', sortingMethod: 'ALPHABETICAL'"
-      echo  'report is generated'
-    }
+       }
    }
   stage('Verify')
   {
@@ -30,6 +28,18 @@ stages
       bat 'mvn verify'
       echo 'verfication done'
     }
+  }
+  stage('Generate HTML report')
+  {
+      cucumber buildStatus: 'UNSTABLE',
+                fileIncludePattern: '**/*.json',
+                trendsLimit: 10,
+                classifications: [
+                    [
+                        'key': 'Browser',
+                        'value': 'Firefox'
+                    ]
+                ]
   }
 }
 }
