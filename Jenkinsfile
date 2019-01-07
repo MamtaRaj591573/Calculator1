@@ -35,7 +35,7 @@ stages
     {
       cucumber buildStatus: 'UNSTABLE',
                 fileIncludePattern: '**/cucumber.json',
-                jasonReportDirectory: 'target'
+               
                 
     }
   }
