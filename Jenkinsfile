@@ -34,9 +34,8 @@ stages
     steps
     {
       cucumber buildStatus: 'UNSTABLE',
-                fileIncludePattern: '**/*.json',
-               
-                
+                fileIncludePattern: '**/*.json'
+                      
     }
   }
 }
