@@ -19,6 +19,9 @@ stages
       echo 'basic test done'
        bat 'mvn integration-test'
       echo 'integration test done'
+      bat 'mvn smoke-testing'
+      echo 'smoke testing is done'
+
        }
    }
   stage('Verify')
