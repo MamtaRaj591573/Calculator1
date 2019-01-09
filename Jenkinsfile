@@ -19,8 +19,7 @@ stages
       echo 'basic test done'
        bat 'mvn integration-test'
       echo 'integration test done'
-      bat 'mvn smoke-test'
-      echo 'smoke testing is done'
+      
 
        }
    }
@@ -32,14 +31,6 @@ stages
       echo 'verfication done'
     }
   }
-  stage('Generate HTML report')
-  {
-    steps
-    {
-      cucumber buildStatus: 'UNSTABLE',
-                fileIncludePattern: '**/*.json'
-                      
-    }
-  }
+  
 }
 }
