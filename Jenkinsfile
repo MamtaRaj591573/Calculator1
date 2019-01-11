@@ -21,7 +21,7 @@ stages
       echo 'integration test done'
       
         try {
-            withMaven(maven: 'D:\apache-maven-3.3.9-bin\apache-maven-3.3.9') {
+            withMaven(maven: 'Maven 1') {
                 dir('bobcat') {
                     bat 'mvn clean test -Dwebdriver.type=remote -Dwebdriver.url=http://localhost:4444/wd/hub -Dwebdriver.cap.browserName=chrome -Dmaven.test.failure.ignore=true'
                 }
