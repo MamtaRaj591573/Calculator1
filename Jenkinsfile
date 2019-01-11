@@ -19,24 +19,8 @@ stages
       echo 'basic test done'
        bat 'mvn integration-test'
       echo 'integration test done'
-      
-        try {
-            withMaven(maven: 'Maven 1') {
-                dir('bobcat') {
-                    bat 'mvn clean test -Dwebdriver.type=remote -Dwebdriver.url=http://localhost:4444/wd/hub -Dwebdriver.cap.browserName=chrome -Dmaven.test.failure.ignore=true'
-                }
-            }
-        } 
-      finally {
-            junit testResults: 'bobcat/target/*.xml', allowEmptyResults: true
-            archiveArtifacts 'bobcat/target/**'
-        }
-
-       
-   }
-
-
-       
+      }
+     
    }
   stage('Verify')
   {
